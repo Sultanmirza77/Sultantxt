@@ -23,7 +23,7 @@ import re
 import os
 
 bot = Client("bot",
-             bot_token= "7365556454:AAEuqP8at8IUAb6zPJGqZWMgHvhDdA7Eg5I",
+             bot_token= "7497562785:AAGUEPUtmo1dUvCwK8wsf9jxBDhkXQEL6Ds",
              api_id=29693199,
              api_hash= "3f74b60e72e2bd8a3ebefed11c0e3e86")
 
@@ -118,7 +118,7 @@ async def account_login(bot: Client, m: Message):
     else:
         CR = raw_text3
 
-    await editable.edit("Now send the **Thumb url**\nEg : ```https://telegra.ph/file/0633f8b6a6f110d34f044.jpg```\n\nor Send `no`")
+    await editable.edit("Now send the **Thumb url**\nEg : ```https://graph.org/file/7e348f692d1d2d0c14b05.jpg```\n\nor Send `no`")
     input6 = message = await bot.listen(editable.chat.id)
     raw_text6 = input6.text
     await input6.delete(True)
@@ -127,7 +127,7 @@ async def account_login(bot: Client, m: Message):
     thumb = input6.text
     if thumb.startswith("http://") or thumb.startswith("https://"):
         getstatusoutput(f"wget '{thumb}' -O 'thumb.jpg'")
-        thumb = "thumb.jpg"
+        thumb = "graph.org/file/7e348f692d1d2d0c14b05.jpg"
     else:
         thumb == "no"
 
